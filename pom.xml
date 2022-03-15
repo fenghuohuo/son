@@ -50,6 +50,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.hippoom/wechat-mp-starter -->
+        <dependency>
+            <groupId>com.github.hippoom</groupId>
+            <artifactId>wechat-mp-starter</artifactId>
+            <version>0.3.2</version>
+        </dependency>
     </dependencies>
 
     <build>
