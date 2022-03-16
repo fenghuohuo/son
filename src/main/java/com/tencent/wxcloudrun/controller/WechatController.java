@@ -24,7 +24,7 @@ public class WechatController {
         throws NoSuchAlgorithmException {
         ArrayList<String> strings = new ArrayList<>();
 
-        strings.add(signature);
+        strings.add("zALDTmMiljVGzFIcRyBBYj268y3Ydx6N");
         strings.add(timestamp);
         strings.add(nonce);
 
