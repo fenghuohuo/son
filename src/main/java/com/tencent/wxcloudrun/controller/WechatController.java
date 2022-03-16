@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.commons.codec.binary.Hex;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,7 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: fenghuohuo
  * @create: 2022-03-16 09:53
  **/
-@RestController("/wechat")
+@RequestMapping("/wechat")
+@RestController
 public class WechatController {
     @GetMapping("/checkSignature")
     public String checkSignature(String signature, String timestamp, String nonce, String echostr)
