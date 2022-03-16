@@ -36,29 +36,6 @@ public class CounterController {
         this.logger = LoggerFactory.getLogger(CounterController.class);
     }
 
-    @GetMapping("/checkSignature")
-    public String checkSignature(String signature, String timestamp, String nonce, String echostr)
-        throws NoSuchAlgorithmException {
-        ArrayList<String> strings = new ArrayList<>();
-
-        strings.add(signature);
-        strings.add(timestamp);
-        strings.add(nonce);
-
-        List<String> collect = strings.stream()
-            .sorted()
-            .collect(Collectors.toList());
-
-        MessageDigest instance = MessageDigest.getInstance("SHA-1");
-
-        String s = Hex.encodeHexString(instance.digest(String.join("", collect).getBytes()));
-
-        if (s.equals(signature)) {
-            return echostr;
-        }
-        return "";
-    }
-
 
 
     /**
