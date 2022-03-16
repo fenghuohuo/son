@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController("/wechat")
 public class WechatController {
-    @GetMapping("checkSignature")
+    @GetMapping("/checkSignature")
     public String checkSignature(String signature, String timestamp, String nonce, String echostr)
         throws NoSuchAlgorithmException {
         ArrayList<String> strings = new ArrayList<>();
